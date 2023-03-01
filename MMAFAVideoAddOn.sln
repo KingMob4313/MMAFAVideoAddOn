@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1800
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extension", "extension", "{A9CA3255-DAD7-4709-A40D-A79DAF42B89F}"
+	ProjectSection(SolutionItems) = preProject
+		extension\manifest.json = extension\manifest.json
+		mmafavideomanager.js = mmafavideomanager.js
+		video-getter.js = video-getter.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{9C433D4D-F3AB-47A3-9B5E-2B34797608CA}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C433D4D-F3AB-47A3-9B5E-2B34797608CA} = {A9CA3255-DAD7-4709-A40D-A79DAF42B89F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4024E64-0E5B-43C8-8A7E-D2D4DFB33863}
+	EndGlobalSection
+EndGlobal

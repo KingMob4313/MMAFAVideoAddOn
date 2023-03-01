@@ -1,0 +1,24 @@
+{
+
+  "manifest_version": 2,
+  "name": "MMAFAVideoManager",
+  "version": "0.1",
+
+  "description": "Gets the 1080p video",
+
+  "permissions": [ "contextMenus" ],
+
+
+  "icons": {
+    "48": "icons/border-48.png",
+    "96": "icons/border-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "mmafavideomanager.js", "video-getter.js" ]
+    }
+  ]
+
+}
