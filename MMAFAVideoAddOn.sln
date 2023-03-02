@@ -5,12 +5,24 @@ VisualStudioVersion = 15.0.28307.1800
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extension", "extension", "{A9CA3255-DAD7-4709-A40D-A79DAF42B89F}"
 	ProjectSection(SolutionItems) = preProject
+		background.js = background.js
 		extension\manifest.json = extension\manifest.json
-		mmafavideomanager.js = mmafavideomanager.js
 		video-getter.js = video-getter.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{9C433D4D-F3AB-47A3-9B5E-2B34797608CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sidebar", "sidebar", "{8CF0BD6E-449B-4378-8CC2-E6B346DEBDEE}"
+	ProjectSection(SolutionItems) = preProject
+		sidebar.html = sidebar.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_locales", "_locales", "{7E9C3F59-83B3-45C8-B807-160CC0930929}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en", "en", "{90311458-FB45-4C41-BB65-E7AE167AA893}"
+	ProjectSection(SolutionItems) = preProject
+		messages.json = messages.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
@@ -18,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9C433D4D-F3AB-47A3-9B5E-2B34797608CA} = {A9CA3255-DAD7-4709-A40D-A79DAF42B89F}
+		{8CF0BD6E-449B-4378-8CC2-E6B346DEBDEE} = {A9CA3255-DAD7-4709-A40D-A79DAF42B89F}
+		{7E9C3F59-83B3-45C8-B807-160CC0930929} = {A9CA3255-DAD7-4709-A40D-A79DAF42B89F}
+		{90311458-FB45-4C41-BB65-E7AE167AA893} = {7E9C3F59-83B3-45C8-B807-160CC0930929}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4024E64-0E5B-43C8-8A7E-D2D4DFB33863}

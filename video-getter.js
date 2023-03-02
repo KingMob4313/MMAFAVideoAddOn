@@ -10,7 +10,7 @@ document.body.appendChild(linkHeader);
 
 function getJsonFrom(jsonInfo) {
     var videoUrl = "";
-    alert('fuckoff');
+    console.log("getJsonCalled");
     for (var i = 0; i < jsonInfo.progressive.length; i++) {
         if (progressive.quality == "1080p") {
             var videoPackage = jsonData.progressive[i];
