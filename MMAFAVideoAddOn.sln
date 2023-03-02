@@ -3,25 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1800
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extension", "extension", "{A9CA3255-DAD7-4709-A40D-A79DAF42B89F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extension", "extension", "{41BE2576-1FD9-47E1-8DB9-23BB82A2BEA2}"
 	ProjectSection(SolutionItems) = preProject
-		background.js = background.js
+		extension\background.js = extension\background.js
 		extension\manifest.json = extension\manifest.json
-		video-getter.js = video-getter.js
+		extension\video-getter.js = extension\video-getter.js
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{9C433D4D-F3AB-47A3-9B5E-2B34797608CA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sidebar", "sidebar", "{8CF0BD6E-449B-4378-8CC2-E6B346DEBDEE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sidebar", "sidebar", "{242D180C-F2E7-47EE-98FB-36E39A807595}"
 	ProjectSection(SolutionItems) = preProject
-		sidebar.html = sidebar.html
+		extension\sidebar\sidebar.html = extension\sidebar\sidebar.html
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_locales", "_locales", "{7E9C3F59-83B3-45C8-B807-160CC0930929}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_locale", "_locale", "{A06B25E9-7D96-4DB0-A6D0-8FC69CB58FEE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en", "en", "{90311458-FB45-4C41-BB65-E7AE167AA893}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "en", "en", "{52D210BE-9007-40C7-A0D7-D72748CDC754}"
 	ProjectSection(SolutionItems) = preProject
-		messages.json = messages.json
+		extension\_locales\en\messages.json = extension\_locales\en\messages.json
 	EndProjectSection
 EndProject
 Global
@@ -29,10 +27,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9C433D4D-F3AB-47A3-9B5E-2B34797608CA} = {A9CA3255-DAD7-4709-A40D-A79DAF42B89F}
-		{8CF0BD6E-449B-4378-8CC2-E6B346DEBDEE} = {A9CA3255-DAD7-4709-A40D-A79DAF42B89F}
-		{7E9C3F59-83B3-45C8-B807-160CC0930929} = {A9CA3255-DAD7-4709-A40D-A79DAF42B89F}
-		{90311458-FB45-4C41-BB65-E7AE167AA893} = {7E9C3F59-83B3-45C8-B807-160CC0930929}
+		{242D180C-F2E7-47EE-98FB-36E39A807595} = {41BE2576-1FD9-47E1-8DB9-23BB82A2BEA2}
+		{A06B25E9-7D96-4DB0-A6D0-8FC69CB58FEE} = {41BE2576-1FD9-47E1-8DB9-23BB82A2BEA2}
+		{52D210BE-9007-40C7-A0D7-D72748CDC754} = {A06B25E9-7D96-4DB0-A6D0-8FC69CB58FEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4024E64-0E5B-43C8-8A7E-D2D4DFB33863}
