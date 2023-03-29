@@ -4,10 +4,11 @@ We'll just log success/failure here.
 */
 function onCreated() {
     if (browser.runtime.lastError) {
-        console.log(`Error: ${browser.runtime.lastError}`);
+        console.debug(`Error: ${browser.runtime.lastError}`);
     } else {
-        console.log("Item created successfully");
+        console.debug("Item created successfully");
     }
+    console.clear();
 }
 
 /*
@@ -15,7 +16,7 @@ Called when the item has been removed.
 We'll just log success here.
 */
 function onRemoved() {
-    console.log("Item removed successfully");
+    console.debug("Item removed successfully");
 }
 
 /*
@@ -23,7 +24,7 @@ Called when there was an error.
 We'll just log the error here.
 */
 function onError(error) {
-    console.log(`Error: ${error}`);
+    console.debug(`Error: ${error}`);
 }
 
 /*
@@ -63,6 +64,18 @@ browser.menus.create({
     id: "bluify",
     type: "radio",
     title: browser.i18n.getMessage("menuItemBluify"),
+    contexts: ["all"],
+    checked: false,
+    icons: {
+        "16": "icons/paint-blue-16.png",
+        "32": "icons/paint-blue-32.png"
+    }
+}, onCreated);
+
+browser.menus.create({
+    id: "getVideoLink",
+    type: "radio",
+    title: "Get Video Link",
     contexts: ["all"],
     checked: false,
     icons: {
@@ -134,6 +147,19 @@ function updateCheckUncheck() {
     }
 }
 
+function getJsonFrom(jsonInfo) {
+    var videoUrl = "";
+    console.debug("getJsonCalled");
+    for (var i = 0; i < jsonInfo.progressive.length; i++) {
+        if (progressive.quality == "1080p") {
+            var videoPackage = jsonData.progressive[i];
+            console.debug(videoPackage.url);
+            videoUrl = videoPackage.url;
+        }
+    }
+    return videoUrl;
+}
+
 /*
 The click event listener, where we perform the appropriate action given the
 ID of the menu item that was clicked.
@@ -141,7 +167,7 @@ ID of the menu item that was clicked.
 browser.menus.onClicked.addListener((info, tab) => {
     switch (info.menuItemId) {
         case "log-selection":
-            console.log(info.selectionText);
+            console.debug(info.selectionText);
             break;
         case "remove-me":
             let removing = browser.menus.remove(info.menuItemId);
@@ -157,10 +183,13 @@ browser.menus.onClicked.addListener((info, tab) => {
             updateCheckUncheck();
             break;
         case "open-sidebar":
-            console.log("Opening my sidebar");
+            console.debug("Opening my sidebar");
             break;
+        case "getVideoLink":
+            console.debug("Getting Video Link");
+            getJsonFrom(this.window.playerConfig);
         case "tools-menu":
-            console.log("Clicked the tools menu item");
+            console.debug("Clicked the tools menu item");
             break;
     }
 });

@@ -9,14 +9,14 @@ linkHeader.textContent = "Here is the url:";
 document.body.appendChild(linkHeader);
 
 function getJsonFrom(jsonInfo) {
-    var videoUrl = "";
-    console.log("getJsonCalled");
-    for (var i = 0; i < jsonInfo.progressive.length; i++) {
-        if (progressive.quality == "1080p") {
-            var videoPackage = jsonData.progressive[i];
-            console.log(videoPackage.url);
-            videoUrl = videoPackage.url;
-        }
+    var xyz = window.playerConfig.request.files.progressive.filter(m => m.profile == "169");
+    if (xyz.length > 0) {
+        // attach the current document URL to the anchor element
+        $("#tabPanelsDiv").attr("href", xyz[0].url);
+        $("#alertBox").dialog({
+            title: "Create duplicate tab ?",
+            minWidth: 200
+        });
     }
-    return videoUrl;
+    return xyz;
 }
